@@ -1,8 +1,17 @@
-export default function App(){
+import {createBrowserRouter} from 'react-router-dom'
 
-  return(
-    <div>
-      <h1>My First Project</h1>
-    </div>
-  )
-}
+import Home from './pages/Home'
+import Login from './pages/Login'
+import Adminn from './pages/Admin'
+
+import Error from './pages/Error'
+
+const router = createBrowserRouter([
+
+  { path: '/', element: <Home/>},
+  { path: '/login', element: <Login/>},
+  { path: '/admin', element: <Adminn/>},
+  { path: '/*', element: <Error/>}
+])
+
+export {router};

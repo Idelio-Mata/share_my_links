@@ -1,0 +1,18 @@
+.logo{
+  margin-top: 44px;
+  margin-bottom: 28px;
+  color: #fff;
+  font-size: 54px;
+}
+.logo-text{
+  background: linear-gradient(#0C2529, #FFD43A,#0C2529, #FFD43A);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Linear gradient
+  background: linear-gradient(#0C2529, #FFD43A); DOURADO
+  background: linear-gradient(#0C2529,#FFD43A, #0D2C30); DOURADO ESCURO
+  background: linear-gradient(#FFD43A,#0C2529, #0D2C30 ); MIXED 1
+*/

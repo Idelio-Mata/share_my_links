@@ -1,4 +1,4 @@
 export default function Private( {children} ) {
-  return
+  return childrean
 }
 

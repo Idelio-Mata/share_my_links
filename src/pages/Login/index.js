@@ -4,10 +4,14 @@ import { Logo} from '../../components/Logo'
 
 import { auth } from '../../services/firebaseConnection'
 import { signInWithEmailAndPassword } from 'firebase/auth'
+import { Navigate, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 export default function Login(){
   const [ email, setEmail ] = useState("");
   const [ password, setPassword ] = useState("");
+
+  const navigate = useNavigate();
 
   function handleLogin(e){
     e.preventDefault();
@@ -19,11 +23,15 @@ export default function Login(){
 
     signInWithEmailAndPassword( auth, email, password)
     .then(() => {
-      console.log("User logged in successfully")
+      toast.success('Welcome back!')
+      navigate( "/admin", { replace: true })
     })
     .catch(() => {
+      toast.error ('Error during login2')
       console.log("Error during login")
-    });
+    })
+
+
   }
 
 

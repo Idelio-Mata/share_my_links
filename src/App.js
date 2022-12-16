@@ -5,11 +5,13 @@ import Login from './pages/Login'
 import Adminn from './pages/Admin'
 import Error from './pages/Error'
 
+import Private from './routes/Private'
+
 const router = createBrowserRouter([
 
   { path: '/', element: <Home/>},
   { path: '/login', element: <Login/>},
-  { path: '/admin', element: <Adminn/>},
+  { path: '/admin', element: <Private> <Adminn/> </Private>},
   { path: '/*', element: <Error/>}
 ])
 

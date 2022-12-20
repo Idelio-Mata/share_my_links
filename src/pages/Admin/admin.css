@@ -1,0 +1,33 @@
+.admin-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0 6px;
+}
+
+.label{
+  color: #ece8dd; /*#0C2529, #FFD43A,*/
+  font-weight: medium; 
+  margin: 8px 0 14px 0;
+}
+
+.container-colors{
+  display: flex;
+  margin: 14px 0;
+  gap: 22px;
+}
+.right{
+  margin-right: 14px;
+}
+
+.btn-register{
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-register svg{
+  margin-left: 8px;
+}

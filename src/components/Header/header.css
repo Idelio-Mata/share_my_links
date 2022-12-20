@@ -1,0 +1,33 @@
+.admin-header{
+  width: 100%;
+  max-width: 720px;
+  margin-top: 14px;
+  padding: 0 14px;
+}
+
+.nav-header{
+  width: 100%;
+  background-color: #fff;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.nav-header button{
+  border: 0;
+  background-color: transparent;
+  margin-left: 8px;
+  margin-right: 24px;
+}
+
+.nav-header a{
+  margin-right: 14px;
+  color:#10b3b3;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.admin-header a:hover{
+  color: #eda617;
+}

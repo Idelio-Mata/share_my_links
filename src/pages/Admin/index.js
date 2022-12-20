@@ -43,8 +43,15 @@ export default function Admin(){
           Register <MdAddLink size={24} color="#fff"/>
         </button>
 
-
       </form>
+
+      <h2 className='title'>
+        My links
+      </h2>
+
+      <article className='list'>
+        
+      </article>
 
     </div>
   )

@@ -7,6 +7,13 @@ import { Input } from '../../components/Input'
 import { MdAddLink }  from 'react-icons/md'
 import { FiTrash2 } from 'react-icons/fi'
 
+import { db} from '../../services/firebaseConnection'
+
+import {
+  addDoc, collection, onSnapshot, query,  orderBy,  doc,  deleteDoc
+} from 'firebase/firestore'
+import { toast } from 'react-toastify'
+
 
 export default function Admin(){
   const [ nameInput, setNameInput] = useState("");
@@ -15,13 +22,40 @@ export default function Admin(){
   const [ textColorInput, setTextColorInput] = useState("#121212");
 
 
+  async function handleRegister(e){
+    e.preventDefault();
+    
+    if(nameInput === '' || urlInput === ''){
+      toast.warn('Please fill all fields!')
+      return;
+    }
+
+    addDoc(collection(db, 'links'),{
+      name: nameInput,
+      url: urlInput,
+      bg: backgroundColorInput,
+      color: textColorInput,
+      created: new Date(),
+    })
+    .then(()=>{
+      setNameInput('')
+      setUrlInput('')
+      console.log("Link successfully registered!")
+    })
+    .catch((err) =>{
+      console.log('Error while registering ' + err)
+      toast.error('Error ocurring to register link')
+    })
+
+  }
+
   return(
     <div className='admin-container'>
       <Header/>
 
       <Logo/>
 
-      <form className='form'>
+      <form className='form' onSubmit={handleRegister}>
 
         <label className='label'>Link name</label>
         <Input 

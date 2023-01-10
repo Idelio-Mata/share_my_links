@@ -137,7 +137,7 @@ export default function Admin(){
           </div>
         )}
 
-        <button className='btn-register' type='submit'>
+        <button className='-registebtnr' type='submit'>
           Register <MdAddLink size={24} color="#fff"/>
         </button>
 

@@ -1,19 +1,56 @@
 import { useState } from 'react'
+import { useEffect } from 'react'
 import './social.css'
 
 import { Header } from '../../components/Header'
 import { Input } from '../../components/Input'
 import { MdAddLink} from 'react-icons/md'
-import { async } from '@firebase/util'
+
+import { db } from '../../services/firebaseConnection'
+import { setDoc, doc, getDoc } from 'firebase/firestore'
+import { toast } from 'react-toastify'
+
 
 export default function SocialMedia(){
   const [facebook, setFacebook] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [instagram, setInstagram] = useState("");
- 
-  async function handleSave(e){
+
+  useEffect(() => {
+
+    function loadLinks(){
+      const docRef = doc(db, 'SocialMedia', 'link')
+      getDoc(docRef)
+      .then((snapshot) => {
+
+        if (snapshot.data()!== undefined) {
+          setFacebook(snapshot.data().facebook)
+          setInstagram(snapshot.data().instagram)
+          setWhatsapp(snapshot.data().whatsapp)
+         
+        }
+      })
+    }
+    loadLinks();
+  },[])
+
+
+ function handleSave(e){
     e.preventDefault();
-    alert('teste')
+   
+    setDoc(doc(db, 'SocialMedia','link'),{
+      facebook: facebook,
+      whatsapp: whatsapp,
+      instagram: instagram
+    })
+    .then(() => {
+      console.log ("Urls saved successfully!")
+      toast.success('Saved successfully!')
+    })
+    .catch((error)=>{
+      console.log("Something went wrong trying to save " + error)
+      toast.error('Sorry something went wrong trying to save!')
+    })
   }
 
   

@@ -30,7 +30,7 @@ export default function Login(){
       navigate( "/admin", { replace: true })
     })
     .catch(() => {
-      toast.error ('Error during login')
+      toast.error ('Error.... Please verify your Email our Password!')
       console.log("Error during login")
     })
 

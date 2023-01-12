@@ -2,6 +2,7 @@
 
 
 link: https://mylinkshare.netlify.app/admin
+https://app.netlify.com/sites/mylinkshare/settings/deploys
 
 
 

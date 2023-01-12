@@ -11,7 +11,7 @@ import { FiTrash2 } from 'react-icons/fi'
 import { db} from '../../services/firebaseConnection'
 
 import {
-  addDoc, collection, onSnapshot, query,  orderBy,  doc,  deleteDoc, snapshotEqual
+  addDoc, collection, onSnapshot, query,  orderBy,  doc,  deleteDoc,
 } from 'firebase/firestore'
 import { toast } from 'react-toastify'
 
@@ -29,7 +29,7 @@ export default function Admin(){
     const linksRef = collection(db, 'links')
     const queryRef = query(linksRef,orderBy('created', 'asc'))
 
-    const unsub = onSnapshot(queryRef, (snapshot) => {
+    onSnapshot(queryRef, (snapshot) => {
       let lista = [];
 
       snapshot.forEach((doc) => {

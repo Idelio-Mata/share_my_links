@@ -12,7 +12,7 @@ import { toast } from 'react-toastify'
 
 
 export default function SocialMedia(){
-  const [facebook, setFacebook] = useState("");
+  const [linkedin, setLinkedin] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [instagram, setInstagram] = useState("");
 
@@ -24,7 +24,7 @@ export default function SocialMedia(){
       .then((snapshot) => {
 
         if (snapshot.data()!== undefined) {
-          setFacebook(snapshot.data().facebook)
+          setLinkedin(snapshot.data().linkedin)
           setInstagram(snapshot.data().instagram)
           setWhatsapp(snapshot.data().whatsapp)
          
@@ -39,7 +39,7 @@ export default function SocialMedia(){
     e.preventDefault();
    
     setDoc(doc(db, 'SocialMedia','link'),{
-      facebook: facebook,
+      linkedin: linkedin,
       whatsapp: whatsapp,
       instagram: instagram
     })
@@ -61,14 +61,14 @@ export default function SocialMedia(){
      <h1 className='title-social'> Your social media</h1>
 
      <form className='form' onSubmit={handleSave}>
-      <label className='label'>Facebook link</label>
+      <label className='label'>Linkedin link</label>
       <Input
-        placeholder=" Type facebook url here..."
-        value={facebook}
-        onChange={(e) => setFacebook(e.target.value)}
+        placeholder=" Type linkedin url here..."
+        value={linkedin}
+        onChange={(e) => setLinkedin(e.target.value)}
       />
 
-      <label className='label'>Whatapp Link</label>
+      <label className='label'>WhatsApp Link</label>
       <Input
         placeholder=" Type whatsapp url here..."
         

@@ -52,6 +52,7 @@ quem sabe, talvez eu seja o candidato perfeito para sua empresa."
 
 
 
+
 ##  Technology
   - React Js
   - HTML

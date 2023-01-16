@@ -45,7 +45,8 @@ quem sabe, talvez eu seja o candidato perfeito para sua empresa."
 
 
 ## Visão do utilizador
-<p>Nesta sessão pode-se adicionar até Links das suas redes sociais...  Tenha em  <p>
+<p>Essa tela final é tudo que você verá ao acessar o meu site de partilha de Links.<p>
+ O conteúdo da página pode váriar de acordo com o número de links partilhados no momento em que acesar a página.
 
 ![preview](./.github/EndUser.png)
 </br></br>

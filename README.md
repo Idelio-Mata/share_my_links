@@ -1,12 +1,12 @@
 # My_Share_Link React App
 > Welcome to My_Share_Link.
 
-![preview](./public/.github/login.png)
+![preview](./.github/login.png)
 
 
 onde você pode encontrar e ver todos os meus trabalhos agrupados e acessíveis de forma fácil. Se você tem dificuldades em acessar o GitHub, aqui é o lugar certo para você! Dê uma olhada e confira todos os projetos incríveis que já trabalhei. Não perca a oportunidade de ver meu trabalho e ficar impressionado com minhas habilidades."
 
-![preview](./public/.github/login.png)
+![preview](./.github/AddLinks.png)
 
 
 This small project was a Next Level Week event promoted by Rocketseat <https://app.rocketseat.com.br/> 

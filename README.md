@@ -44,6 +44,14 @@ quem sabe, talvez eu seja o candidato perfeito para sua empresa."
 </br></br>
 
 
+## Visão do utilizador
+<p>Nesta sessão pode-se adicionar até Links das suas redes sociais...  Tenha em  <p>
+
+![preview](./.github/EndUser.png)
+</br></br>
+
+
+
 ##  Technology
   - React Js
   - HTML
